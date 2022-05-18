@@ -15,8 +15,8 @@ jobs:
       - name: Setup java
         uses: actions/setup-java@v3.3.0
         with:
-          java-version: 11
-          distribution: Temurin
+          java-version: '11'
+          distribution: 'temurin'
 
       - name: Run maven-checkstyle-plugin
         run: |
