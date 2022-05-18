@@ -1,11 +1,9 @@
-/*
- * Copyright (C) 2021 Festo Didactic SE
+/*-
+ * %%Ignore-License
  *
- * This program and the accompanying materials are made
- * available under the terms of the Eclipse Public License 2.0
- * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * Copyright (C) 2018 aventurin
  *
- * SPDX-License-Identifier: EPL-2.0
+ * SPDX-License-Identifier: CC-BY-SA-3.0
  */
 
 package com.festo.aas.p4m.logging;
@@ -16,6 +14,10 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Adapter to redirect logging calls to Juli to SLF4J.
+ *
+ * <p>
+ * Acknowledgements to aventurin at
+ * <a href="https://stackoverflow.com/a/49266815/2462409">Stackoverflow</a>}.
  */
 public class DelegateToSlf4jLogger implements Log {
   private final Logger logger;

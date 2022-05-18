@@ -20,4 +20,4 @@ jobs:
 
       - name: Run maven-checkstyle-plugin
         run: |
-          mvn -B checkstyle:check -D env=ci
+          mvn -B license:check-file-header checkstyle:check -D env=ci -D license.failOnNotUptodateHeader=true
