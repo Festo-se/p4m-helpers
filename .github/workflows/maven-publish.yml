@@ -1,11 +1,11 @@
-# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+# This workflow will build a package using Maven and then publish it to Maven Central when a release is created
 # For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
 
-name: Maven Package
+name: Publish Maven package
 
 on:
   release:
-    types: [created]
+    types: [released]
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
         server-id: ossrh
         server-username: MAVEN_USERNAME # env variable which is set in deploy step
         server-password: MAVEN_PASSWORD # env variable which is set in deploy step
-        gpg-private-key: MAVEN_GPG_PRIVATE_KEY # env variable which is set in deploy step
+        gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # PGP secret key which will be imported into keyring 
         gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable which is set in deploy step
 
     - name: Build with Maven
@@ -35,5 +35,4 @@ jobs:
       env:
         MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
         MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
-        MAVEN_GPG_PRIVATE_KEY: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
         MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
