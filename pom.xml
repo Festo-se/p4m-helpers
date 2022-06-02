@@ -4,7 +4,7 @@
 
   <groupId>com.festo.aas</groupId>
   <artifactId>p4m-helpers</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
   <name>Papyrus4Manufacturing helpers</name>
@@ -38,6 +38,7 @@
     <url>https://github.com/Festo-se/p4m-helpers</url>
     <connection>scm:git:https://github.com/Festo-se/p4m-helpers.git</connection>
     <developerConnection>scm:git:https://github.com/Festo-se/p4m-helpers.git</developerConnection>
+    <tag>v1.0.0</tag>
   </scm>
 
   <properties>
