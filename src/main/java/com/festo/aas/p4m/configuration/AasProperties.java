@@ -170,7 +170,7 @@ public abstract class AasProperties {
    * The hostname (or IP) under which the AAS listens for network requests.
    */
   @LoadableProperty
-  public final StringProperty aplicationHostname = new StringProperty("aas.hostname");
+  public final StringProperty applicationHostname = new StringProperty("aas.hostname");
 
   /**
    * Loads the customized properties from the configured file and parses all
