@@ -15,7 +15,7 @@ Assuming you _do_ want to use this library in your own project, put this depende
 <dependency>
   <groupId>com.festo.aas</groupId>
   <artifactId>p4m-helpers</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
 </dependency>
 ```
 
